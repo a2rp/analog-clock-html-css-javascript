@@ -1,0 +1,190 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+.bodyContainer {
+    background-color: #333;
+    color: #fff;
+    height: 100vh;
+    padding: 50px;
+    text-align: center;
+
+    .heading {
+        text-align: center;
+    }
+
+    .clockContainer {
+        margin-top: 30px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 5px solid darkblue;
+        margin: 0 auto;
+        background-color: #aaa;
+        position: relative;
+
+        .timeTick {
+            width: 5px;
+            height: 100%;
+            // background-color: #000;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            &::before,
+            &::after {
+                position: absolute;
+                margin: auto;
+                left: 0;
+                right: 0;
+                display: flex;
+                justify-content: center;
+                color: #000;
+                font-weight: bolder;
+            }
+            &:before {
+            }
+            &::after {
+                top: calc(100% - 15px);
+            }
+        }
+        .timeTick1 {
+            transform: rotateZ(0deg);
+
+            &::before {
+                content: "12";
+            }
+            &::after {
+                content: "6";
+            }
+        }
+        .timeTick2 {
+            transform: rotateZ(30deg);
+
+            &::before {
+                content: "1";
+                transform: rotateZ(-30deg);
+            }
+            &::after {
+                content: "7";
+                transform: rotateZ(-30deg);
+            }
+        }
+        .timeTick3 {
+            transform: rotateZ(60deg);
+
+            &::before {
+                content: "2";
+                transform: rotateZ(-60deg);
+            }
+            &::after {
+                content: "8";
+                transform: rotateZ(-60deg);
+            }
+        }
+        .timeTick4 {
+            transform: rotateZ(90deg);
+
+            &::before {
+                content: "3";
+                transform: rotateZ(-90deg);
+            }
+            &::after {
+                content: "9";
+                transform: rotateZ(-90deg);
+            }
+        }
+        .timeTick5 {
+            transform: rotateZ(120deg);
+
+            &::before {
+                content: "4";
+                transform: rotateZ(-120deg);
+            }
+            &::after {
+                content: "10";
+                transform: rotateZ(-120deg);
+            }
+        }
+        .timeTick6 {
+            transform: rotateZ(150deg);
+
+            &::before {
+                content: "5";
+                transform: rotateZ(-150deg);
+            }
+            &::after {
+                content: "11";
+                transform: rotateZ(-150deg);
+            }
+        }
+
+        .digitalDateTime {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            transform: translateY(20px);
+            height: 0;
+            display: flex;
+            padding: 15px;
+            color: #000;
+            font-weight: bolder;
+        }
+
+        .centerDot {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: #000;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+        }
+
+        .hand {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            border-radius: 10px;
+            background-color: #000;
+        }
+
+        .hour {
+            background-color: rgba(0, 0, 0, 0.5);
+            transform-origin: bottom;
+            width: 10px;
+            height: 100px;
+            transform: translateY(50px) rotateZ(-30deg);
+        }
+        .minute {
+            background-color: rgba(0, 0, 0, 0.5);
+            transform-origin: bottom;
+            width: 5px;
+            height: 130px;
+            transform: translateY(20px) rotateZ(30deg);
+        }
+        .second {
+            background-color: rgba(0, 0, 0, 1);
+            transform-origin: bottom;
+            width: 5px;
+            height: 130px;
+            transform: translateY(20px) rotateZ(45deg);
+        }
+    }
+}

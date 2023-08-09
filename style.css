@@ -1,0 +1,172 @@
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+}
+
+.bodyContainer {
+  background-color: #333;
+  color: #fff;
+  height: 100vh;
+  padding: 50px;
+  text-align: center;
+}
+.bodyContainer .heading {
+  text-align: center;
+}
+.bodyContainer .clockContainer {
+  margin-top: 30px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid darkblue;
+  margin: 0 auto;
+  background-color: #aaa;
+  position: relative;
+}
+.bodyContainer .clockContainer .timeTick {
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.bodyContainer .clockContainer .timeTick::before, .bodyContainer .clockContainer .timeTick::after {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-weight: bolder;
+}
+.bodyContainer .clockContainer .timeTick::after {
+  top: calc(100% - 15px);
+}
+.bodyContainer .clockContainer .timeTick1 {
+  transform: rotateZ(0deg);
+}
+.bodyContainer .clockContainer .timeTick1::before {
+  content: "12";
+}
+.bodyContainer .clockContainer .timeTick1::after {
+  content: "6";
+}
+.bodyContainer .clockContainer .timeTick2 {
+  transform: rotateZ(30deg);
+}
+.bodyContainer .clockContainer .timeTick2::before {
+  content: "1";
+  transform: rotateZ(-30deg);
+}
+.bodyContainer .clockContainer .timeTick2::after {
+  content: "7";
+  transform: rotateZ(-30deg);
+}
+.bodyContainer .clockContainer .timeTick3 {
+  transform: rotateZ(60deg);
+}
+.bodyContainer .clockContainer .timeTick3::before {
+  content: "2";
+  transform: rotateZ(-60deg);
+}
+.bodyContainer .clockContainer .timeTick3::after {
+  content: "8";
+  transform: rotateZ(-60deg);
+}
+.bodyContainer .clockContainer .timeTick4 {
+  transform: rotateZ(90deg);
+}
+.bodyContainer .clockContainer .timeTick4::before {
+  content: "3";
+  transform: rotateZ(-90deg);
+}
+.bodyContainer .clockContainer .timeTick4::after {
+  content: "9";
+  transform: rotateZ(-90deg);
+}
+.bodyContainer .clockContainer .timeTick5 {
+  transform: rotateZ(120deg);
+}
+.bodyContainer .clockContainer .timeTick5::before {
+  content: "4";
+  transform: rotateZ(-120deg);
+}
+.bodyContainer .clockContainer .timeTick5::after {
+  content: "10";
+  transform: rotateZ(-120deg);
+}
+.bodyContainer .clockContainer .timeTick6 {
+  transform: rotateZ(150deg);
+}
+.bodyContainer .clockContainer .timeTick6::before {
+  content: "5";
+  transform: rotateZ(-150deg);
+}
+.bodyContainer .clockContainer .timeTick6::after {
+  content: "11";
+  transform: rotateZ(-150deg);
+}
+.bodyContainer .clockContainer .digitalDateTime {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateY(20px);
+  height: 0;
+  display: flex;
+  padding: 15px;
+  color: #000;
+  font-weight: bolder;
+}
+.bodyContainer .clockContainer .centerDot {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+.bodyContainer .clockContainer .hand {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  background-color: #000;
+}
+.bodyContainer .clockContainer .hour {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform-origin: bottom;
+  width: 10px;
+  height: 100px;
+  transform: translateY(50px) rotateZ(-30deg);
+}
+.bodyContainer .clockContainer .minute {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform-origin: bottom;
+  width: 5px;
+  height: 130px;
+  transform: translateY(20px) rotateZ(30deg);
+}
+.bodyContainer .clockContainer .second {
+  background-color: rgb(0, 0, 0);
+  transform-origin: bottom;
+  width: 5px;
+  height: 130px;
+  transform: translateY(20px) rotateZ(45deg);
+}/*# sourceMappingURL=style.css.map */
